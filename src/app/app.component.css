@@ -1,0 +1,92 @@
+:host {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-content: space-around;
+    align-items: center;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todo-container>* {
+    margin: 10px;
+    padding: 10px;
+    background: #c3e6cb;
+    border-radius: 5px;
+    color: #537965;
+    cursor: pointer;
+}
+
+.todo-container>*:hover {
+    background: #67756a;
+    color: #ffffff;
+}
+
+.todo-container>*:active {
+    opacity: 0.1;
+}
+
+.todo-container>*:first-child {
+    margin-top: 20px;
+}
+
+.todo-container>*:last-child {
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background: #6f757b;
+    border-radius: 8px;
+    color: white;
+}
+
+.header {
+    padding: 20px 20px 15px 20px;
+    border-bottom: 1px solid #3c3c3c47;
+}
+
+.input {
+    padding: 15px 20px 15px 20px;
+}
+
+.input>* {
+    outline-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    color: #6f757b;
+}
+
+.button {
+    padding: 0 20px 20px 20px;
+}
+
+.button>* {
+    color: inherit;
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button>*:active {
+    background-color: #4490e2;
+}
+
+.button>*:disabled {
+    background-color: #537faf;
+    cursor: default;
+}

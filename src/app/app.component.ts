@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  inputValue: string;
   title = 'angularapp';
+  onInput(event:any):void{
+    this.inputValue=event.target.value;
+  }
 }
