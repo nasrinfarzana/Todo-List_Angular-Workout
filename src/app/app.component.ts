@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   inputValue: string;
-  title = 'angularapp';
-  onInput(event:any):void{
-    this.inputValue=event.target.value;
+  toDoList: Array<string> = [];
+  addTodo(): void {
+    this.toDoList.push(this.inputValue);
+    this.inputValue = '';
   }
 }

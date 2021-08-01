@@ -3,19 +3,15 @@
     <div class="header">Add ToDo List</div>
     <div class="body">
       <div class="input">
-        <input type="text" (input)='onInput($event)'>
+        <input type="text" [(ngModel)]="inputValue">
       </div>
       <div class="button">
-        <input type="button" value="AddList" [disabled]="inputValue!=''">
+        <input type="button" value="AddList" [disabled]="!inputValue" (click)='addTodo()'>
       </div>
     </div>
   </div>
   <div class="todo-container">
-    <div>Todo 1</div>
-    <div>Todo 2</div>
-    <div>Todo 3</div>
-    <div>Todo 4</div>
-    <div>Todo 5</div>
+    <div *ngFor="let eachTodo of toDoList;let i = index" (click)="toDoList.splice(i, 1)">{{eachTodo}}</div>
   </div>
 </div>
 <router-outlet></router-outlet>
